@@ -18,4 +18,3 @@ Ele suporta **vários destinatários**, personalização de mensagens e armazena
 - Conta do Gmail com **senha de aplicativo**
 - Bibliotecas Python:
   ```bash
-  pip install python-dotenv
