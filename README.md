@@ -19,16 +19,26 @@ Ele suporta **vários destinatários**, personalização de mensagens e armazena
 - Bibliotecas Python:
   ```bash
   pip install python-dotenv
-  
 🔑 Criando a Senha de App no Gmail
 Acesse Segurança da Conta Google.
+
 Ative a Verificação em duas etapas.
+
 Vá em Senhas de app.
+
 Escolha E-mail e nomeie como Python.
+
 Copie a senha gerada (16 caracteres) e guarde.
+
+⚙️ Configuração
+Crie um arquivo .env na raiz do projeto:
+
+env
 
 EMAIL_USER=seuemail@gmail.com
 EMAIL_PASS=sua-senha-de-app
+📜 Uso Básico
+python
 
 import smtplib
 from email.mime.text import MIMEText
@@ -54,8 +64,18 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465) as servidor:
     servidor.sendmail(remetente, destinatarios, mensagem.as_string())
 
 print("E-mail enviado com sucesso!")
+🛡️ Segurança
+Nunca compartilhe seu .env em repositórios públicos.
 
+Adicione .env ao .gitignore:
+
+bash
+Copiar
+Editar
 .env
+💡 Exemplo Avançado: HTML + Anexos
+📄 Enviando E-mail em HTML com Anexo
+python
 
 import smtplib
 from email.mime.text import MIMEText
@@ -103,11 +123,16 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465) as servidor:
     servidor.sendmail(remetente, destinatarios, mensagem.as_string())
 
 print("E-mail HTML com anexo enviado com sucesso!")
-
 📌 Melhorias Futuras
 Ler lista de destinatários de arquivo .csv
+
 Agendar envio automático com schedule
+
 Integrar com planilhas do Google Sheets
 
 👨‍💻 Autor
 Desenvolvido por Gabriel Andrade
+💼 LinkedIn | 🎮 Colecionador de games | 💻 CTO & Suporte Técnico
+
+yaml
+---
